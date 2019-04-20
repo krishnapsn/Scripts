@@ -1,5 +1,6 @@
 # Cool Scripts and my .zshrc file
 A list of bash and python scripts which I make as and when I need it as a way to learn bash scripting and solutions of the practice exercises and examples in the book [Advanced bash scripting guide](https://github.com/siadat/advanced-bash-scripting-guide/blob/master/abs-guide.epub)
+<img src="http://freecomputerbooks.com/covers/Advanced-Bash-Scripting-Guide.jpg" alt="alt text" width="600" height="500">
 ## My .zshrc profile
 <img src="https://github.com/psycholoony/Scripts/blob/master/Imgs/Screenshot%202019-04-20%20at%204.20.10%20AM.png" width="1000" height="300">
 
