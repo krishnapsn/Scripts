@@ -1,5 +1,7 @@
 import requests
 import sys
+import os
+os.system('clear')
 URL='https://api.github.com/users/'
 usern=sys.argv[1]
 user=requests.get(URL+usern)
@@ -14,18 +16,21 @@ repoNames=[repoJSON1[i].get('name') for i in range(len(repoJSON1))]
 repoDesc=[repoJSON1[i].get('description') for i in range(len(repoJSON1))]
 repoFr=[repoJSON2[i].get('login') for i in range(len(repoJSON2))]
 repoFl=[repoJSON3[i].get('login') for i in range(len(repoJSON3))]
-print("REAL NAME :: "+JSON1.get('name'))
-if(JSON1.get('location')==None):
-	print("NO LOCATION")
+if(JSON1.get('name')==None):
+	print("REAL NAME NOT AVAILABLE\n")
 else:
-	print(JSON1.get('location'))
-print("\t\t\tTHESE ARE THE REPOSITORIES BELONGING TO "+usern)
+	print("REAL NAME :: "+JSON1.get('name')+"\n")
+if(JSON1.get('location')==None):
+	print("NO LOCATION\n")
+else:
+	print(JSON1.get('location')+"\n")
+print("\t\t\tTHESE ARE THE REPOSITORIES BELONGING TO "+usern+"\n\n")
 for i,j in enumerate(repoNames):
-	print("\t\t"+j+"\n")
+	print("\tREPO NAME:\t"+j+"\n")
 	if(repoJSON1[i].get('private')):
 		print("\t\tTHE REPOSITORY IS PRIVATE\n")
 	if(repoDesc[i]):
-		print(repoDesc[i]+"\n")
+		print("\t"+repoDesc[i]+"\n")
 print("\t\t\t\t\t\t\tFOLLOWERS")	
 for i in repoFr:
 	print("\t\t"+i+"\n")
